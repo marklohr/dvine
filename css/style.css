@@ -1,12 +1,32 @@
-.wrapper {
-  max-height: 100vh;
-}
-.one, .tow {
-  height: 100vh;
-  width: 100%;
-}
+/*Splash and Plan Trip pages */
+.containers {
+  width: 100%; }
+  .containers .splash, .containers .plan {
+    height: 100vh; }
+  .containers .splash {
+    background-image: url("images/3DCollage.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; }
+  .containers .plan {
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    position: absolute; }
+  .containers p {
+    font-size: 20 vh;
+    font-family: Helvetica, sans-serif;
+    color: white; }
+  .containers .wrapper {
+    max-height: 100vh; }
+  .containers .wrapper {
+    max-height: 100vh; }
 
-.one {
-  background-color: red;
-  -webkit-
-}
+/* map*/
+#map-canvas {
+  width: 80%;
+  height: 500px;
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */
