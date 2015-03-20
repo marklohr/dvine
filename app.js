@@ -1,67 +1,29 @@
 (function (){
   "use strict";
 
-  angular.module ('dvineApp', [
-     'ngRoute'
+  angular.module('dvine', [
+     'ngRoute',
      'ngAnimate',
      'uiGmapgoogle-maps',
-    // //  'admin',
-    //  'login',
-    //  'usermain'
+     'usermain',
+  // 'ngCookies',
+//   'ngResource',
+//   'ngSanitize'
   ])
   .config(function ($routeProvider){
     $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
-      // controller: 'MainController as mainCtrl'
+      //controller: 'MainCtrl'      This is what mapDemo has instead of line below
+      controller: 'MainController as mainCtrl'
     })
-    .when('/map', {
-      templateUrl: 'user/views/map.html'
- //     controller: 'MapController as mapCtrl'
-   })
-    //   .when('/about', {
-    //     templateUrl: 'views/about.html',
-    //     controller: 'MainController as mainCtrl'
-    //   })
-    //   .when('/splash', {
-    //     templateUrl: 'views/splash.html',
-    //     controller: 'MainController as mainCtrl'
-    //   })
-    //   .when('/not-found', {
-    //     templateUrl: 'views/404.html',
-    //     controller: 'MainController as mainCtrl'
-    //   })
-    //   .when('/favorites', {
-    //     templateUrl: 'front/front.favorites.html',
-    //     controller: 'FavoriteController as favorite'
-    //   })
-    //   .otherwise({
-    //     redirectTo: '/not-found'
-    //   })
+    // .when('/map', {
+    //   templateUrl: '/user/views/map.html'
     // })
-    // .constant('_', _)
+    .when('/not-found', {
+      templateUrl: 'views/notfound.html',
+      controller: 'MainController as mainCtrl'
+    })
+  });
 
-
-  })();
-
-
-
-
-
-
-
-
-
-
-
-
-// //   .when('/restInfo' {
-//     templateUrl: 'user/views/user.restraurants.html'
-//   })
-//   .when('/admin'{
-//     templateUrl: 'admin/admin.html'
-//     controller: 'MainController as mainCtrl'
-//   })
- });
-
-}) ();
+})();

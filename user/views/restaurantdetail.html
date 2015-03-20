@@ -1,0 +1,20 @@
+<div class="left">
+    <div class="whiteBox">
+        <div class="views">
+            <button class="gridView">grid view</button>
+            <button class="mapView">map view</button>
+        </div>
+    </div>
+</div>
+
+<div class="right">
+    <h1 class="restaurantDetail">{{restCtrl.singleRestaurant.name}}</h1>
+    <img ng-src="{{restCtrl.singleRestaurant.logo}}" alt="restCtrl.singleRestaurant.name">
+    <a class="twitter" target= "_blank"       href="{{restCtrl.singleRestaurant.twitter}}">{{restCtrl.singleRestaurant.twitter}}</a>
+    <h3 class="infoDetail">{{restCtrl.singleRestaurant.address1}} </h3>
+    <h3 class="infoDetail">{{restCtrl.singleRestaurant.address2}} </h3>
+    <h3 class="infoDetail">{{restCtrl.singleRestaurant.city}} </h3>
+    <h3 class="infoDetail">{{restCtrl.singleRestaurant.phone}} </h3>
+    <a class="website" target= "_blank"       href="{{restCtrl.singleRestaurant.website}}">{{restCtrl.singleRestaurant.website}}</a>
+    <p class="infoDescription">{{restCtrl.singleRestaurant.descrShort}} </p>
+</div>

@@ -1,6 +1,6 @@
 // (function() {
 //   "use strict";
-// angular.module("devineApp", [])
+// angular.module('dvine', [])
 //   .controller("MyController", function($scope) {
 //     $scope.myForm = {};
 //     $scope.myForm.miles = "5";
