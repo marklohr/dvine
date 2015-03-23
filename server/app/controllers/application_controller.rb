@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 private
   def set_default_response_format
-    request.format = :json
+    request.format = :html
   end  
 
 end
