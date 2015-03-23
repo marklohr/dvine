@@ -3,6 +3,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
     respond_to do |format|
+      format.html #index.html.erb
       format.json { render json: @restaurants.to_json }
     end
   end
@@ -20,10 +21,12 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       respond_to do |format|
         format.json { render json: @restaurant.to_json }
+        format.html
     end
   else
     respond_to do |format|
       format.json { render json: @restaurant.errors.full_messages, status: 422 }
+      format.html
     end
   end
 end
