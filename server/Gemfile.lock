@@ -45,6 +45,7 @@ GEM
     aws-sdk-v1 (1.63.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -234,6 +235,7 @@ PLATFORMS
 DEPENDENCIES
   angular_rails_csrf
   aws-sdk (< 2.0)
+  bcrypt
   byebug
   cancancan (~> 1.10)
   capybara
