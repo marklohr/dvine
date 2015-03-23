@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Dvine</title>
+
+</head>
+
+<body ng-app="dvine">
+
+  <div>
+    <ng-view></ng-view>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!--MAIN APP SCRIPTS-->
+  <script src="app.js"></script>
+  <script src="service.js"></script>
+  <script src="controller.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+  <div class="rest-data row">
+    <div class="col-md-8">
+
+    <ul>
+      <li ng-repeat="restaurant in mainCtrl.restaurants" class="rest-info">
+        <h1 class="rest-name">{{restaurant.name}}</h1>
+        <h3 class="address">{{restaurant.address}}</h3>
+        <h3 class="city">{{restaurant.city}}</h3>
+        <h3 class="state">{{restaurant.state}}</h3>
+        <h3 class="phone">{{restaurant.phone}}</h3>
+        <a class="website" href="{{restaurant.website}}">
+          {{restaurant.website}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  </div>

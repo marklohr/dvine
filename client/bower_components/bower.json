@@ -1,0 +1,16 @@
+{
+  "name": "dvine",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Dvine/dvine",
+  "authors": [
+    "allstons <jagschwartz@aol.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
