@@ -1,26 +1,26 @@
 (function() {
   "use strict";
   angular.module('dvine')
-    .controller('MainController', function (RestaurantService, $scope, $http, $routeParams, $location){
-      var mainCtrl = this;
+    .controller('RestController', function (RestaurantService, $scope, $http, $routeParams, $location){
+      var restCtrl = this;
 
 
-      // mainCtrl.restaurants = RestaurantService.getRestaurants();
+      // restCtrl.restaurants = RestaurantService.getRestaurants();
       console.log(RestaurantService);
       RestaurantService.getRestaurants().success(function(data){
-        mainCtrl.restaurants = data;
+        restCtrl.restaurants = data;
       });
 
-      //mainCtrl.singleRestaurant = RestaurantService.getRestaurant($routeParams.restaurantIndex);
-      // mainCtrl.go = function (index) {
+      //restCtrl.singleRestaurant = RestaurantService.getRestaurant($routeParams.restaurantIndex);
+      // restCtrl.go = function (index) {
       //   $http.post("https://d-vine.herokuapp.com/restaurants.json" + index)
       // };
 
-      mainCtrl.getRestaurant = function (restaurant) {
+      restCtrl.getRestaurant = function (restaurant) {
         RestaurantService.getItem(restaurant);
       };
 
-      mainCtrl.getAllRestaurants = function(restaurants) {
+      restCtrl.getAllRestaurants = function(restaurants) {
         RestaurantService.getAllItems(restaurants);
       };
     })

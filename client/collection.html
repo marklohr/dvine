@@ -1,0 +1,24 @@
+<div class="rest-data row">
+  <div class="col-md-8">
+
+    <ul>
+      <li ng-repeat="restaurant in restCtrl.restaurants" class="rest-info">
+        <h1 class="rest-name">{{restaurant.name}}</h1>
+        <h3 class="address">{{restaurant.address}}</h3>
+        <h3 class="city-state">{{restaurant.city + ", " + restaurant.state}}</h3>
+        <h3 class="phone">{{restaurant.phone}}</h3>
+        <a class="website" href="{{restaurant.website}}">
+          {{restaurant.website}}
+        </a>
+        <br>
+       <div class="deleteFromCollection">
+        <a href="#/list">
+          <button ng-click="restCtrl.deleteItem(restaurant)" class="btn btn-default cntbtn">
+            <p class="delete">Delete</p>
+          </button>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>

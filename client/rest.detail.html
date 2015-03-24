@@ -1,0 +1,24 @@
+
+
+<div class="detailContainer row">
+  <div class="restDetail col-md-6 col-md-offset-2" ng-controller="restaurant in restCtrl.restaurants">
+
+
+    <h1 class="restaurantDetail">{{restaurant.name}}</h1>
+    <h3 class="restAdd">{{restaurant.address}} </h3>
+    <h3 class="restCity">{{restaurant.city}} </h3>
+    <h3 class="restState">{{restaurant.state}}</h3>
+    <h3 class="restZip">{{restaurant.zip}}</h3>
+    <h3 class="restPhone">{{restaurant.phone}} </h3>
+    <a class="website" target= "_blank"  href="{{restaurant.website}}">{{restaurant.website}}</a>
+    <a href="#/collection">
+      <button ng-click="restCtrl.addItem(restaurant)" class="btn btn-default cntbtn">
+        <p class="add">Add to Personal Log</p>
+      </button>
+    </a>
+    <button type="submit" class="btn btn=default">Edit</button>
+    <button class="btn btn-default restDelBtn" ng-click="restCtrl.deleteRestaurant(restaurant)">
+      <p>Delete</p>
+    </button>
+  </div>
+</div>

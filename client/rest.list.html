@@ -1,0 +1,69 @@
+<div class="list-container"
+  <div class="rest-data row">
+    <div class="col-md-8">
+
+      <ul>
+        <li ng-repeat="restaurant in restCtrl.restaurants" class="rest-info">
+          <h1 class="rest-name">{{restaurant.name}}</h1>
+          <h3 class="address">{{restaurant.address}}</h3>
+          <h3 class="city-state">{{restaurant.city + ", " + restaurant.state}}</h3>
+<!--           <h3 class="state">{{restaurant.state}}</h3>
+ -->          <h3 class="phone">{{restaurant.phone}}</h3>
+          <a class="website" href="{{restaurant.website}}">
+            {{restaurant.website}}
+          </a>
+          <br>
+         <div class="addToCollection">
+           <button ng-click="restCtr.editRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+                     <p class="delete">Edit Restaurant</p>
+                   </button>
+<!--           <a href="#/collection">
+ -->            <button ng-click="restCtrl.addRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+              <p class="add">Add Restaurant</p>
+            </button>
+<!--           </a>
+ -->        <button ng-click="restCtr.deleteRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+             <p class="delete">Delete Restaurant</p>
+           </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="form row">
+    <div class="col-md-3">
+
+      <!--CRUD form-->
+      <form novalidate name="AddNewRest" id="add-new-rest" method="post" action="">
+        <input type="text" ng-model="restaurant.name" placeholder="Name of Restaurant" required/>
+        <input type="text" ng-model="restaurant.address" placeholder="Street Address" required/>
+        <input type="text" ng-model="restaurant.city" placeholder="City" required/>
+        <input type="text" ng-model="restaurant.state" placeholder="State" required/>
+        <input type="text" ng-model="restaurant.zip" placeholder="Zip Code" required/>
+        <input type="text" ng-model="restaurant.phone" placeholder="Phone Number" required/>
+        <input type="text" ng-model="restaurant.website" placeholder="Website Address" required/>
+        <br>
+
+
+
+
+        <div class="addToCollection">
+          <div class="row">
+            <div class="col-md-5">
+          <button ng-click="restCtr.editRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+            <p class="delete">Edit Restaurant</p>
+          </button>
+        <a href="#/collection">
+          <button ng-click="restCtrl.addRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+            <p class="add">Add Restaurant</p>
+          </button>
+          </a>
+          <button ng-click="restCtr.deleteRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+            <p class="delete">Delete Restaurant</p>
+          </button>
+        </form>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>

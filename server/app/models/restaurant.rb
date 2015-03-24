@@ -10,6 +10,8 @@ class Restaurant < ActiveRecord::Base
   validates :latitude, presence: false
   validates :longitude, presence: false
 
+  has_many :collections_venues
+
   # geocoded_by :full_street_address
   # after_validation :geocode
 
