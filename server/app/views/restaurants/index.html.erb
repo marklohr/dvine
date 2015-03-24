@@ -31,11 +31,20 @@
     <strong>Website:</strong>
     <%= restaurant.website %>
     <br>
+    <strong>Latitude:</strong>
+    <%= restaurant.latitude %>
     <br>
+    <strong>Longitude:</strong>
+    <%= restaurant.longitude %>
+    <br>
+    <br>
+
       <a class="btn btn-sm btn-info" href="<%= restaurant_path(restaurant) %>" role="button">More Information</a>
       <a class="btn btn-sm btn-warning" href="<%= edit_restaurant_path(restaurant) %>" role="button">Edit Information</a>
       <br>
       <br>
     <br>
   <% end %>
+    <%= will_paginate @restaurants %>
+  
 </div>

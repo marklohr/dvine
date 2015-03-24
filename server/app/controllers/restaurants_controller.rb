@@ -1,9 +1,16 @@
 class RestaurantsController < ApplicationController
+
+  # require 'will_paginate/array'
   
   def index
-    @restaurants = Restaurant.all
+    # if params[:page]
+      @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
+    # else
+      # @restaurants = Restaurant.all
+    # end
     respond_to do |format|
       format.html #index.html.erb
+        # @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
       format.json { render json: @restaurants.to_json }
     end
   end

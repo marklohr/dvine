@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :restaurants
+  resources :collections do
+    member do
+      post :add_restaurant
+    end
+  end
 
   root 'welcome#index'
 

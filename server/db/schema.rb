@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323184038) do
+ActiveRecord::Schema.define(version: 20150324013144) do
+
+  create_table "collections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "collections_restaurants", force: :cascade do |t|
+    t.integer  "collection_id", limit: 4
+    t.integer  "restaurant_id", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name",       limit: 255
