@@ -2,9 +2,9 @@ class RestaurantsController < ApplicationController
   
   def index
     # if params[:page]
-      @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
+    ##@restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
     # else
-      # @restaurants = Restaurant.all
+    @restaurants = Restaurant.all
     # end
     respond_to do |format|
       format.html #index.html.erb
@@ -15,6 +15,11 @@ class RestaurantsController < ApplicationController
   
   def show
     set_restaurant
+    respond_to do |format|
+      format.html #index.html.erb
+        # @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
+      format.json { render json: @restaurant.to_json }
+    end
   end
 
   def new
