@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dvine_Server</title>
+  <title>Dvine_Administrator</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if current_user %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete =%>
+        /
+        <%= link_to 'Update User Info', edit_user_registration_path =%>
+        <% else %>
+        <%= link_to 'Login', new_user_session_path =%>
+        /
+        <%= link_to 'Register', new_user_registration_path =%>
+        <br>
+      <% end %>
+
+      <% if current_user %>
+      <%= link to restaurants
+      <%end
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>

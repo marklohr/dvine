@@ -1,5 +1,5 @@
 <h1 colspan="2" style="text-align:center;">
-  <u>Restaurants</u>
+  <u>Restaurants Admin View</u>
 </h1>
 <p id="notice">
   <%= notice %>
@@ -7,7 +7,7 @@
 <br>
 
 <div class="col-md-5">
-  <a class="btn btn-primary btn-lg btn-block" href="<%= root_path %>" role="button">Home Page »</a>
+  <a class="btn btn-primary btn-lg btn-block" href="<%= new_restaurant_path %>" role="button">Enter New Restaurant »</a>  
   <br>
   <% @restaurants.each do |restaurant| %>
     <strong>Name:</strong>
@@ -38,5 +38,4 @@
       <br>
     <br>
   <% end %>
-  <a class="btn btn-primary btn-lg btn-block" href="<%= new_restaurant_path %>" role="button">Enter New Restaurant »</a>
 </div>
