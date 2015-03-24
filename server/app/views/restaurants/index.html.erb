@@ -1,50 +1,60 @@
-<h1 colspan="2" style="text-align:center;">
-  <u>Restaurants Admin View</u>
-</h1>
-<p id="notice">
-  <%= notice %>
-</p>
-<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="container">
+      <div class="col-lg-12">
+        <div class="row">
+          <h1 colspan="2" style="text-align:center;">
+            <u>Restaurants Admin View</u>
+          </h1>
+          <p id="notice">
+            <%= notice %>
+          </p>
+          <br>
 
-<div class="col-md-5">
-  <a class="btn btn-primary btn-lg btn-block" href="<%= new_restaurant_path %>" role="button">Enter New Restaurant »</a>  
-  <br>
-  <% @restaurants.each do |restaurant| %>
-    <strong>Name:</strong>
-    <%= restaurant.name %>
-    <br>
-    <strong>Address:</strong>
-    <%= restaurant.address %>
-    <br>
-    <strong>City:</strong>
-    <%= restaurant.city %>
-    <br>
-    <strong>State:</strong>
-    <%= restaurant.state %>
-    <br>
-    <strong>Zip Code:</strong>
-    <%= restaurant.zip %>
-    <br>
-    <strong>Phone Number:</strong>
-    <%= restaurant.phone %>
-    <br>
-    <strong>Website:</strong>
-    <%= restaurant.website %>
-    <br>
-    <strong>Latitude:</strong>
-    <%= restaurant.latitude %>
-    <br>
-    <strong>Longitude:</strong>
-    <%= restaurant.longitude %>
-    <br>
-    <br>
+          <div class="col-md-5">
+            <a class="btn btn-primary btn-lg btn-block" href="<%= new_restaurant_path %>" role="button">Enter New Restaurant »</a>  
+            <br>
+            <% @restaurants.each do |restaurant| %>
+              <strong>Name:</strong>
+              <%= restaurant.name %>
+              <br>
+              <strong>Address:</strong>
+              <%= restaurant.address %>
+              <br>
+              <strong>City:</strong>
+              <%= restaurant.city %>
+              <br>
+              <strong>State:</strong>
+              <%= restaurant.state %>
+              <br>
+              <strong>Zip Code:</strong>
+              <%= restaurant.zip %>
+              <br>
+              <strong>Phone Number:</strong>
+              <%= restaurant.phone %>
+              <br>
+              <strong>Website:</strong>
+              <%= restaurant.website %>
+              <br>
+              <strong>Latitude:</strong>
+              <%= restaurant.latitude %>
+              <br>
+              <strong>Longitude:</strong>
+              <%= restaurant.longitude %>
+              <br>
+              <br>
 
-      <a class="btn btn-sm btn-info" href="<%= restaurant_path(restaurant) %>" role="button">More Information</a>
-      <a class="btn btn-sm btn-warning" href="<%= edit_restaurant_path(restaurant) %>" role="button">Edit Information</a>
-      <br>
-      <br>
-    <br>
-  <% end %>
-    <%= will_paginate @restaurants %>
-  
+                <a class="btn btn-sm btn-info" href="<%= restaurant_path(restaurant) %>" role="button">More Information</a>
+                <a class="btn btn-sm btn-warning" href="<%= edit_restaurant_path(restaurant) %>" role="button">Edit Information</a>
+                <br>
+                <br>
+              <br>
+            <% end %>
+              <%= will_paginate @restaurants %>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

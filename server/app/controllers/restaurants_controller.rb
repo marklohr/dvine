@@ -1,6 +1,4 @@
 class RestaurantsController < ApplicationController
-
-  # require 'will_paginate/array'
   
   def index
     # if params[:page]

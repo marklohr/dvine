@@ -18,6 +18,8 @@ gem 'rack-cors'
 gem 'devise'
 # pagination
 gem 'will_paginate'
+# generates alphabetic pagination
+# gem 'alphabetical_paginate'
 # adds geocoding (by street or IP), reverse geocoding, and distance queries.
 gem 'geocoder'
 #remove unneeded assets
