@@ -1,8 +1,14 @@
 class RestaurantsController < ApplicationController
   
   def index
-    @restaurants = Restaurant.all
+    # if params[:page]
+      @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
+    # else
+      # @restaurants = Restaurant.all
+    # end
     respond_to do |format|
+      format.html #index.html.erb
+        # @restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
       format.json { render json: @restaurants.to_json }
     end
   end
@@ -20,10 +26,12 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       respond_to do |format|
         format.json { render json: @restaurant.to_json }
+        format.html
     end
   else
     respond_to do |format|
       format.json { render json: @restaurant.errors.full_messages, status: 422 }
+      format.html
     end
   end
 end
