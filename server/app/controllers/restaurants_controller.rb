@@ -24,22 +24,26 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    respond_to do |format|
+      format.html 
+      format.json { render json: @restaurant.to_json }
+    end
   end
 
   def create
     @restaurant = Restaurant.new restaurant_params
-    if @restaurant.save
+      if @restaurant.save
       respond_to do |format|
         format.json { render json: @restaurant.to_json }
         format.html
-    end
-  else
-    respond_to do |format|
-      format.json { render json: @restaurant.errors.full_messages, status: 422 }
-      format.html
+        end
+      else
+      respond_to do |format|
+        format.json { render json: @restaurant.errors.full_messages, status: 422 }
+        format.html
+      end
     end
   end
-end
 
   def edit
     @restaurant = Restaurant.find params[:id]
@@ -62,9 +66,6 @@ end
   def destroy
     @restaurant = Restaurant.find params[:id]
     @restaurant.destroy
-    respond_to do |format|
-      format.json { render nothing: true }
-    end
   end
 
 
