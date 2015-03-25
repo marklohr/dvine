@@ -5,29 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 
-  <title>Dvine</title>
+  <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
 
+  <title>Dvine</title>
 </head>
 
 <body ng-app="dvine">
 
-  <div>
-    <ng-view></ng-view>
+  <map name="map"></map>
+
+  <div class="view-animate-container">
+    <ng-view class="view-animate"></ng-view>
   </div>
 
   <!-- SCRIPTS -->
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+
+
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
   <!--MAIN APP SCRIPTS-->
   <script src="app.js"></script>
   <script src="service.js"></script>
-  <script src="controller.js"></script>
+  <script src="map/map.js"></script>
+  <script src="restaurant/rest.controller.js"></script>
+  <script src="map/map.controller.js"></script>
 
 </body>
 </html>

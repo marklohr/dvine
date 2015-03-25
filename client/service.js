@@ -8,22 +8,21 @@
         }
       ];
 
-      var url = "https://d-vine.herokuapp.com/restaurants.json";
+      var url = "http://localhost:3001/restaurants";
 
       var getRestaurants = function () {
         // return restaurants;
-        return $http.get('https://d-vine.herokuapp.com/restaurants.json');
+        return $http.get(url + ".json");
       };
-      // var addRestaurant = function (restaurant) {
-      //   restaurants.push(restaurant);
-      // };
 
         var addRestaurant = function(restaurant) {
-          return $http.post('https://d-vine.herokuapp.com/restaurants.json');
+          $http.post(url + ".json", restaurant).success(function(data) {
+            console.log("adding restaurant is successful", data);
+          });
         };
 
       var deleteRestaurant = function (id) {
-        $http.delete("url" + id);
+        $http.delete(url + "/" + id + '.json');
         // var idx = restaurants.indexOf(restaurant);
         // restaurants.splice(index, 1);
         // console.log(restaurants);
@@ -34,7 +33,7 @@
       };
 
       var editRestaurant = function (restaurant) {
-        $http.put("url" + restaurant.id, restaurant )
+        $http.put(url + "/" + restaurant.id, restaurant )
         // restuarants[index] = restaurant;
       }
 

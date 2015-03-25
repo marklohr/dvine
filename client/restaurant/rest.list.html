@@ -1,0 +1,76 @@
+<div class="list-container">
+  <div class="rest-data row">
+    <div class="col-md-8">
+
+                <!--LIST OF RESTAURANTS FROM BACKEND-->
+      <ul>
+        <li ng-repeat="restaurant in restCtrl.restaurants track by $index" class="rest-info">
+          <h1 class="rest-name">{{restaurant.name}}</h1>
+          <h3 class="address">{{restaurant.address}}</h3>
+          <h3 class="city-state">{{restaurant.city + ", " + restaurant.state}}</h3>
+<!--           <h3 class="state">{{restaurant.state}}</h3>
+ -->          <h3 class="phone">{{restaurant.phone}}</h3>
+          <a class="website" href="{{restaurant.website}}">
+            {{restaurant.website}}
+          </a>
+                      <!--EDIT RESTAURANT-->
+
+          <button ng-show="!edit" ng-click="edit = !edit" class="btn btn-default cntbtn"><h2>Edit</h2></button>
+          <form ng-submit="restCtrl.editRestaurant(restaurant)" ng-show="edit">
+            <input type="text" ng-model="restaurant.name" placeholder="Name">
+            <input type="text" ng-model="restaurant.address" placeholer="Street Address">
+            <input type="text" ng-model="restaurant.city" placeholder="City">
+            <input type="text" ng-model="restaurant.state" placeholder="Phone Number">
+            <input type="text" ng-model="restaurant.phone" placeholder="Phone Number">
+            <input type="text" ng-model="restaurant.website" placeholder="Website">
+            <button action="submit">Save Changes</button>
+          </form>
+                      <!--ADD RESTAURANT-->
+
+            <button ng-click="restCtrl.addRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+             <p class="add">Add Restaurant</p>
+           </button>
+
+                      <!--DELETE RESTAURANT-->
+
+          <button ng-click="restCtrl.deleteRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+            <p class="delete">Delete Restaurant</p>
+          </button>
+          <br>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-3" id="CRUDform">
+
+                            <!--CRUD FORM ON RIGHT-->
+
+<form ng-submit="restCtrl.addRestaurant(NewRestaurant)" novalidate name="AddNewRest" id="add-new-rest">
+  <input type="text" ng-model="NewRestaurant.name" placeholder="Name of Restaurant" required/>
+  <input type="text" ng-model="NewRestaurant.address" placeholder="Street Address" required/>
+  <input type="text" ng-model="NewRestaurant.city" placeholder="City" required/>
+  <input type="text" ng-model="NewRestaurant.state" placeholder="State" required/>
+  <input type="text" ng-model="NewRestaurant.zip" placeholder="Zip Code" required/>
+  <input type="text" ng-model="NewRestaurant.phone" placeholder="Phone Number" required/>
+  <input type="text" ng-model="NewRestaurant.website" placeholder="Website Address" required/>
+  <button action="submit" class="btn btn-default cntbtn">
+    <p class="add">Add Restaurant</p>
+  </button>
+  <br>
+
+  <div class="addToCollection">
+    <div class="row">
+      <div class="col-md-5">
+    <button ng-click="restCtr.editRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+      <p class="delete">Edit Restaurant</p>
+    </button>
+    <button ng-click="restCtr.deleteRestaurant(restaurant.id)" class="btn btn-default cntbtn">
+      <p class="delete">Delete Restaurant</p>
+    </button>
+  </form>
+  </div>
+ </div>
+    </div>
+  </div>
+</div>
+</div>
