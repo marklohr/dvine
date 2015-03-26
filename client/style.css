@@ -18,8 +18,10 @@
     text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 15vh; }
   .containers .motto {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    text-align: center;
     text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
-    font-size: 8vh;
+    font-size: 7rem;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif; }
   .containers .container {
