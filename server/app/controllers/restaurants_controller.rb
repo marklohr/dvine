@@ -34,7 +34,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new restaurant_params
       if @restaurant.save
       respond_to do |format|
-        format.json { render json: @restaurant.to_json }
+        format.json { render json: @restaurant.as_json }
         format.html
         end
       else
@@ -53,10 +53,12 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find params[:id]
     if @restaurant.update_attributes restaurant_params
       respond_to do |format|
-        format.json { render json: @restaurant.to_json }
+        format.html
+        format.json { render json: @restaurant.as_json }
       end
     else
       respond_to do |format|
+        format.html
         format.json { render json: @restaurant.errors.full_messages, status: 422 }
       end
     end
