@@ -1,0 +1,58 @@
+
+<div class="containers">
+    <div class="splash">
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <h1 class="title">D'VINE</h1>
+          <p class="motto">Making road trips more palettable...</p>
+        </div>
+      </div>
+    </div>
+    <!--Plan trip form-->
+
+    <div class="plan col-xs-12">
+      <h1 class="words">Plan Your Trip</h1>
+
+      <br>
+
+
+
+      <form>
+
+        <div class="form-group col-xs-6">
+          <label for="from">From</label>
+          <input type="start" class="form-control" id="startingPoint" placeholder="Enter City and State">
+        </div>
+        <div class="form-group col-xs-6">
+          <label for="max">Maximum distance from route</label>
+            <select name="distance" id="distance" class="form-control">
+              <option value="1">1</option>
+              <option value="5" selected="selected">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+        </div>
+        <div class="form-group col-xs-6">
+          <label for="to">To</label>
+          <input type="end" class="form-control" id="endingPoint" placeholder="Enter City and State">
+        </div>
+        <div class="col-xs-6">
+          <label for="exclude" class="exclude">Exclude from start/end (miles):</label>
+          <select class="form-control">
+            <option value="0" selected="selected">N/A</option>
+            <option>N/A</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <div class="col-xs-12"></div>
+        <div class="form-group col-xs-3 col-xs-offset-5">
+          <button type="submit" class="btn-u btn-u-red">Plan Trip</button>
+        </div>
+      </form>
+    </div>
+
+    </div>

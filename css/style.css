@@ -1,0 +1,53 @@
+.angular-google-map-container {
+  height: 800px;
+  /*cannot be % */ }
+
+/*Splash and Plan Trip pages */
+.containers {
+  width: 100%; }
+  .containers .splash, .containers .plan {
+    height: 100vh; }
+  .containers .splash {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("images/3DCollage.png");
+    /*     background-image: url("images/3DCollage.png");
+     */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white; }
+  .containers .title {
+    font-family: 'Sonsie One', cursive;
+    font-size: 15vh; }
+  .containers .motto {
+    font-size: 8vh;
+    color: white;
+    font-family: 'Poiret One', cursive; }
+  .containers .plan {
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    position: absolute; }
+  .containers p {
+    font-size: 20vh;
+    font-family: Helvetica, sans-serif;
+    color: white; }
+  .containers .wrapper {
+    max-height: 100vh; }
+  .containers .wrapper {
+    max-height: 100vh; }
+
+/* map */
+.angular-google-map-container {
+  width: 80%;
+  height: 800px;
+  margin-right: 2%;
+  float: right; }
+
+.list-by-state {
+  margin-left: 2%;
+  color: black;
+  width: 15%;
+  height: 100%; }
+
+/*# sourceMappingURL=style.css.map */

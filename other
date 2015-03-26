@@ -1,0 +1,135 @@
+<!--  <script type="text/javascript">-->
+<!--
+      var map;
+      // var service;
+
+      // function handleSearchResults(results, status)
+      // {
+      //     console.log(results);
+
+      //     for(var i = 0; i < results.length; i++) {
+      //             var marker = new google.maps.Marker({
+      //           position: results[i].geometry.location,
+      //           map: map,
+      //           icon: results[i].icon
+      //       });
+
+      //     }
+      // }
+
+      // function performSearch()
+      // {
+      //     var request = {
+      //         bounds: map.getBounds(),
+      //         name: "McDonald's"
+      //     }
+      //     service.nearbySearch(request, handleSearchResults);
+      // }
+      function initialize(location)
+      {
+          console.log(location);
+
+              var currentLocation = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+
+            var mapOptions = {
+              zoom: 10,
+              center: currentLocation
+                };
+
+            map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: currentLocation,
+                map: map
+            });
+
+            service = new google.maps.places.PlacesService(map);
+
+            // google.maps.event.addListenerOnce(map, 'bounds_changed', performSearch);
+
+            var trafficLayer = new google.maps.TrafficLayer();
+                  $('#toggle_traffic').click(function () {
+                  if (trafficLayer.getMap()){
+                      trafficLayer.setMap(null);
+                  }
+                  else {
+                      trafficLayer.setMap(map);
+                  }
+              });
+
+              var weatherLayer = new google.maps.weather.WeatherLayer({
+                  temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+              });
+              var cloudLayer = new google.maps.weather.CloudLayer();
+
+              $('#toggle_weather').click(function() {
+
+                  if (weatherLayer.getMap() || cloudLayer.getMap()) {
+                      weatherLayer.setMap(null);
+                      cloudLayer.setMap(null);
+                  }
+                  else {
+                      weatherLayer.setMap(map);
+                  }
+              });
+
+      }
+
+      $(document).ready(function()
+      {
+          navigator.geolocation.getCurrentPosition(initialize);
+          }); -->
+<!--       </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- var x=document.getElementById('demo');
+function getLocation ()
+ {
+   if (navigator.geolocation)
+   {
+     navigator.geolocation.getCurrentPosition(showposition);
+   }
+   else(x.innerHTML="Geolocation is not supported by this browser.";)
+ }
+ function showPosition(position)
+ {
+   x.innerHTML="Latitude:" + position.coords.latitude +
+   "<br>Longitude: " + position.coords.longitude;
+ } -->
+<!--    <div ng-repeat="restaurant in restCtrl.restaurants">
+
+<ui-gmap-marker
+    idKey='restuarant._id'
+    coords='restaurant.coords'
+    >
+
+    <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+        <div class="map-window">
+          <h1>{{restaurant.name}}</h1>
+          <div class="map-rest-detail">
+            <p>
+              <i class="fa fa-building"></i>{{restaurant.address1}} <br />
+               <span class="addresstwo">{{restaurant.city}}, SC</span></p>
+            <p>
+               <i class="fa fa-phone"></i>{{restaurant.phone}}
+            </p>
+            <p>
+               <i class="fa fa-envelope"></i><a href="mailto:{{restaurant.email}}" >{{restuarant.email}}</a>
+            </p>
+            <p><i class="fa fa-link"></i><a href="{{restaurant.website}}" target="_blank">{{restaurant.website}}</a></p>
+            <p>{{restaurant.descrShort}}</p>
+          <button class="btn-favorites" href="" ng-click="restCtrl.addToFavorites(restaurant)">Add to Favorites></button>
+          </div>
+      </div>
+    </ui-gmap-window>
+ </ui-gmap-marker>
+ </div> -->
