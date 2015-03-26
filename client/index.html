@@ -8,15 +8,15 @@
   <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 
-  <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
-
+<!--   <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
+ -->
   <title>Dvine</title>
 </head>
 
 <body ng-app="dvine">
 
-  <map name="map"></map>
-
+<!--   <map name="map"></map>
+ -->
   <div class="view-animate-container">
     <ng-view class="view-animate"></ng-view>
   </div>
@@ -25,17 +25,13 @@
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-
-
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
   <!--MAIN APP SCRIPTS-->
   <script src="app.js"></script>
   <script src="service.js"></script>
-  <script src="map/map.js"></script>
   <script src="restaurant/rest.controller.js"></script>
-  <script src="map/map.controller.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,171 @@
+<div class="plan col-xs-12">
+  <h1 class="words">Where Would You Like to Eat?</h1>
+
+  <br>
+
+  <!--LIST OF RESTAURANTS-->
+  <div class="col-xs-7">
+    <input type="text" ng-model="query.name">
+    <select name="findState" id="findState" ng-model="query.state">
+      <option value="al">AL</option>
+      <option value="ak">AK</option>
+      <option value="az">AZ</option>
+      <option value="ar">AR</option>
+      <option value="ca">CA</option>
+      <option value="co">CO</option>
+      <option value="ct">CT</option>
+      <option value="de">DE</option>
+      <option value="fl">FL</option>
+      <option value="ga">GA</option>
+      <option value="hi">HI</option>
+      <option value="id">ID</option>
+      <option value="il">IL</option>
+      <option value="in">IN</option>
+      <option value="ia">IA</option>
+      <option value="ks">KS</option>
+      <option value="ky">KY</option>
+      <option value="la">LA</option>
+      <option value="me">ME</option>
+      <option value="md">MD</option>
+      <option value="ma">MA</option>
+      <option value="mi">MI</option>
+      <option value="mn">MN</option>
+      <option value="ms">MS</option>
+      <option value="mo">MO</option>
+      <option value="mt">MT</option>
+      <option value="ne">NE</option>
+      <option value="nv">NV</option>
+      <option value="nh">NH</option>
+      <option value="nj">NJ</option>
+      <option value="mn">MN</option>
+      <option value="ny">NY</option>
+      <option value="nc">NC</option>
+      <option value="nd">ND</option>
+      <option value="oh">OH</option>
+      <option value="ok">OK</option>
+      <option value="or">OR</option>
+      <option value="pa">PA</option>
+      <option value="ri">RI</option>
+      <option value="sc">SC</option>
+      <option value="sc">SD</option>
+      <option value="tn">TN</option>
+      <option value="tx">TX</option>
+      <option value="ut">UT</option>
+      <option value="vt">VT</option>
+      <option value="wa">WA</option>
+      <option value="wv">WV</option>
+      <option value="wi">WI</option>
+      <option value="wy">WY</option>
+    </seclect>
+
+    <div class"col-xs-4">
+      <ul class="restaurants">
+        <li ng-repeat="restaurant in restaurants | filter:query | orderBy: restaruant.state" class="rest-info">
+          <h1 class="rest-name">{{restaurant.name}}</h1>
+          <h3 class="address">{{restaurant.address}}</h3>
+          <h3 class="city">{{restaurant.city}}</h3>
+          <h3 class="state">{{restaurant.state}}</h3>
+          <h3 class="zip">{{restaurant.zip}}</h3>
+          <h3 class="phone">{{restaurant.phone}}</h3>
+          <a class="website" href="{{restaurant.website}}">{{restaurant.website}}</a>
+        </li>
+      </ul>
+    </div>
+
+</div> <!--END OF COLUMN -->
+
+<!--   ADD RESTAURANT -->
+<!-- <div class="container addRestaurant container-admin"-->
+<div class="addRest">
+<h3 class="add-title">Add a new restaurant</h3>
+
+<form class="form-horizontal" ng-submit="restCtrl.addRestaurant(newRestaurant)">
+
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputName" ng-model="newRestaurant.name" placeholder="Restaurant Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Address</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputAddress" ng-model="newRestaurant.address" placeholder="Street Address">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">City</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputCity" ng-model="newRestaurant.city" placeholder="City">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">State</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputCity" ng-model="newRestaurant.state" placeholder="State">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Zip</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputZip" ng-model="newRestaurant.zip" placeholder="ZIP">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Phone</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputPhone" ng-model="newRestaurant.phone" placeholder="Phone">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">Website</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="inputWebsite" ng-model="newRestaurant.website" placeholder="Website Url">
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!--           ADD RESTAURANT
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<button type="submit">Add Restaurant</button>
+or   <a href="" class="btn-login" ng-click="adminCtrl.addNewProduct(newProduct)">Add product</a>
+</div>
+</div>
+</form>
+</div>
+</div>
+-->
+<!--CALLING RESTAURANTS BY STATE-->
+<!-- <div class="row">
+<div class="search-container ng-scope">
+<div class="row">
+<div class="col-md-2">
+"Search:"
+<input ng-model="query" class="ng-pristine ng-untouched ng-valid">
+"
+Sort by:
+"
+<select ng-model="orderProp" class="ng-pristine ng-untouched ng-valid">
+<option value="state">State</option>
+<option value="city">City</option>
+</select>
+</div> -->
+
+
+
+
+
+
+<!--   <div class="col-md-10">
+BODY CONTENT
+<ul class="restaurants" ng-controller="RestCtrl">
+<li ng-repeat="restaurant in restaurants | filter:query | orderBy:orderProp" class="restaurant-list ng-scope">
+<p class="ng-binding">Restaurant</p>
+</li>
+</div> -->
+</div>
+</div>

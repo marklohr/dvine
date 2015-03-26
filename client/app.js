@@ -3,9 +3,8 @@
 
     angular.module('dvine', [
       'ngRoute',
-      // // 'ngAnimate',
+      // 'ngAnimate',
       // 'uiGmapgoogle-maps',
-      // 'usermain'
     ])
     .config(function ($routeProvider) {
       $routeProvider
@@ -38,12 +37,10 @@
       //   templateUrl: '/restaurant/add.rest.html',
       //   controller: 'RestaurantController as restCtrl'
       // })
-      // .when('/collection', {
-      //   templateUrl: '/collection.html',
-      //   controller:'RestaurantController as restCtrl'
-       //})
+
        .when('/', {
-         templateUrl: '/views/main.html',
+         templateUrl: '/restaurant/main.html',
+         controller: 'RestController as restCtrl'
 
        })
 

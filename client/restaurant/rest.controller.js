@@ -8,7 +8,7 @@
       // restCtrl.restaurants = RestaurantService.getRestaurants();
       console.log(RestaurantService);
       RestaurantService.getRestaurants().success(function(data){
-        restCtrl.restaurants = data; //the data is the restaurants
+        $scope.restaurants = data; //the data is the restaurants
       });
 
       //restCtrl.singleRestaurant = RestaurantService.getRestaurant($routeParams.restaurantIndex);
@@ -27,7 +27,7 @@
       restCtrl.addRestaurant = function (restaurant) {
         RestaurantService.addRestaurant(restaurant);
         $scope.newRestaruant = {};
-        $location.path('/list');
+        // $location.path('/');
       };
 
       restCtrl.editRestaurant = function(id) {
@@ -35,7 +35,7 @@
       }
 
       restCtrl.deleteRestaurant = function(id) {
-        console.log(restaurant , "restaurant");
+        console.log(restaurant, "restaurant");
         RestaurantService.deleteRestaurant(id);
         $location.path('/list');
       }

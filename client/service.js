@@ -8,7 +8,7 @@
         }
       ];
 
-      var url = "http://localhost:3001/restaurants";
+      var url = "http://localhost:9000/restaurants";
 
       var getRestaurants = function () {
         // return restaurants;

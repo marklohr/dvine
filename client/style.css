@@ -1,48 +1,58 @@
-.angular-google-map-container {
-  height: 800px;
-  /*cannot be % */ }
-
 /*Splash and Plan Trip pages */
 .containers {
-  width: 100%; }
+  width: 100%;
+  /* INPUT PAGE */ }
   .containers .splash, .containers .plan {
     height: 100vh; }
   .containers .splash {
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/3DCollage.png");
-    /*     background-image: url("images/3DCollage.png");
-    */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/3DCollage.png");
+    /*     background-image: url("images/3DCollage.png");    */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white; }
   .containers .title {
+    margin-top: 25%;
+    text-align: center;
     font-family: 'Sonsie One', cursive;
+    text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 15vh; }
   .containers .motto {
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
     font-size: 8vh;
     color: white;
-    font-family: 'Poiret One', cursive; }
+    font-family: 'Open Sans Condensed', sans-serif; }
+  .containers .container {
+    width: 100%; }
   .containers .plan {
     margin: 0 auto;
     text-align: center;
     color: black;
     background-color: transparent;
     position: absolute; }
+  .containers .subtitle {
+    text-align: center; }
   .containers p {
     font-size: 20vh;
     font-family: Helvetica, sans-serif;
     color: white; }
+  .containers ul.restaurants {
+    list-style-type: none; }
+  .containers .single {
+    border: 2px solid black;
+    margin: 2%;
+    padding: 5%;
+    border-radius: 3%; }
+  .containers .website {
+    height: 30px; }
   .containers .wrapper {
     max-height: 100vh; }
   .containers .wrapper {
     max-height: 100vh; }
 
-/* map */
-.angular-google-map-container {
-  width: 80%;
-  height: 800px;
-  margin-right: 2%;
-  float: right; }
+.addRest {
+  margin-left: -1%;
+  margin-right: 5%; }
 
 .list-by-state {
   margin-left: 2%;
@@ -50,14 +60,18 @@
   width: 15%;
   height: 100%; }
 
+/* REST.HTML */
 .list-container {
   margin-top: 2%;
   width: 100%;
   font-size: 14px; }
 
+/* REST.DETAIL.HTML */
 .detailBox {
   width: 80%;
   margin: 0 auto;
   height: 800px; }
+
+/* ANIMATION CSS */
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  
+
   def index
     # if params[:page]
     ##@restaurants = Restaurant.paginate(:page => params[:page], :per_page => 20)
@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
       format.json { render json: @restaurants.to_json }
     end
   end
-  
+
   def show
     set_restaurant
     respond_to do |format|
@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
   def new
     @restaurant = Restaurant.new
     respond_to do |format|
-      format.html 
+      format.html
       format.json { render json: @restaurant.to_json }
     end
   end
@@ -34,7 +34,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new restaurant_params
       if @restaurant.save
       respond_to do |format|
-        format.json { render json: @restaurant.to_json }
+        format.json { render json: @restaurant.as_json }
         format.html
         end
       else
@@ -53,7 +53,8 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find params[:id]
     if @restaurant.update_attributes restaurant_params
       respond_to do |format|
-        format.json { render json: @restaurant.to_json }
+        format.html
+        format.json { render json: @restaurant.as_json }
       end
     else
       respond_to do |format|
@@ -74,7 +75,7 @@ class RestaurantsController < ApplicationController
   def set_restaurant
     @restaurant = Restaurant.find params[:id]
   end
-  
+
   def restaurant_params
     params.require(:restaurant).permit(
       :name,
