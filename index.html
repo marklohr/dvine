@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--Google maps-->
+<!--   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+ --><!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+ -->
+<!--the script below is original-->
+   <script src='//maps.googleapis.com/maps/api/js?sensor=false&libraries=places'></script>
+
+   <title>D'VINE</title>
+</head>
+<body ng-app="dvine">
+
+<div class="view-animate-container">
+  <ng-view class="view-animate">
+  <!--Angular app sits here-->
+  </ng-view>
+</div>
+
+  <!-- SCRIPTS -->
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+
+  <!-- MAIN APP SCRIPTS -->
+  <script src="app.js"></script>
+  <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/routeboxer/src/RouteBoxer.js"></script>
+  <script src="controller.js"></script>
+  <script src="user/user.module.js"></script>
+  <script src="user/map/map.service.js"></script>
+  <script src="user/map/map.controller.js"></script>
+
+
+
+
+  <!-- ADMIN SCRIPTS
+  <script src ="admin/admin.module.js"></script>
+  <script src ="admin/admin.controller.js"></script>
+  <script src ="admin/admin.service.js"></script>
+
+  <script src ="login/login.module.js"></script>
+  <script src ="login/login.controller.js"></script>
+  <script src ="login/login.service.js"></script>
+   -->
+ </body>
+
+</html>
