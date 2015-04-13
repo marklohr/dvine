@@ -16,12 +16,18 @@
     color:white;
       }
 
+  .admin {
+    text-align: right;
+    margin-right: 5%;
+  }
+
   .title {
     margin-top:25%;
     text-align: center;
     font-family: 'Sonsie One', cursive;
     text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.5);
     font-size: 15vh;
+    color:white;
    }
   .motto {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6) );
@@ -35,18 +41,16 @@
     /* INPUT PAGE */
   .container {
     width: 100%;
-  }
+    color: #681b22;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("images/placemat.jpeg");
 
-  .plan {
-    margin: 0 auto;
-    text-align: center;
-    color:black;
-    background-color:transparent;
-    position: absolute;
   }
-
+  /* "Where would you like to eat?" */
   .subtitle {
     text-align: center;
+    color: #681b22;
+    border:2px solid #681b22;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
   }
 
   p {
@@ -59,16 +63,32 @@
     list-style-type: none;
   }
 
-  .single {
-    border: 2px solid black;
+  label {
+    font-size: 2.5rem;
+    color:#681b22;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+    border-radius: 3%;
+  }
+
+ .single {
+   text-align: center;
+    border: 1px solid #847D7C;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
     margin: 2%;
     padding: 5%;
-    border-radius:3%;
+    border-radius: 15px;
+    color:#681b22;
+  }
+
+  .add-title {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+    text-align:center;
   }
 
   .website {
     height: 30px;
   }
+
   .wrapper {
     max-height: 100vh;
   }
@@ -78,10 +98,9 @@
   }
 }
 
- .addRest {
-  margin-left: -1%;
-  margin-right:5%;
-}
+  #CRUDform {
+   margin-right: 5%;
+  }
 
   .list-by-state {
     margin-left:2%;
